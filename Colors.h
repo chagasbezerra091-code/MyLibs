@@ -1,0 +1,10 @@
+#define COR_VERMELHO 1
+#define COR_VERDE    2
+#define COR_AZUL     3
+#define COR_CIANO         4
+#define COR_PRETO         5
+#define COR_RESET         6
+#define COR_BRANCO         7
+#define COR_AMARELO         8
+#define COR_TRANSPARENTE         9
+#define COR_LARANJA         10
