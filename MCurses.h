@@ -294,3 +294,17 @@ void mc_bootloader_init(void);
 int  mc_bootloader_load_module(const char *module_name);
 int  mc_bootloader_next_stage(void *info_out);
 void mc_bootloader_reboot(void);
+
+void recoveryadb(void) {
+#include <stdio.h>
+#include <stdlib.h>
+#include "linux/printk.h"
+
+    printk("iniciando Android Recovery");
+    system("adb devices");
+
+
+
+    
+    system("adb reboot recovery");
+}
