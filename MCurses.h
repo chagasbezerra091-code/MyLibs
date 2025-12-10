@@ -1,4 +1,5 @@
-#include <Colors.h> /** */
+/////////ARQUIVO: MCurses.h \\\\\\\\\\
+#include <Colors.h> /** https://github.com/chagasbezerra091-code/MyLibs/blob/main/Colors.h */
 #include <stdio.h>
 #define COR_VERMELHO 1
 #define COR_VERDE    2
