@@ -249,3 +249,48 @@ typedef char bool;
 #define MCURSES_H_KEYBOARD_KEY_7 '7'
 #define MCURSES_H_KEYBOARD_KEY_8 '8'
 #define MCURSES_H_KEYBOARD_KEY_9 '9'
+/* ============================================================
+ * MCurses – subsistema de conexões usando headers reais do Linux
+ * ============================================================ */
+
+/* Bluetooth REAL (BlueZ) */
+#include <bluetooth/bluetooth.h>
+#include <bluetooth/hci.h>
+#include <bluetooth/hci_lib.h>
+#include <bluetooth/l2cap.h>
+#include <bluetooth/rfcomm.h>
+
+/* Wi-Fi REAL (nl80211 / wireless extensions) */
+#include <linux/wireless.h>
+#include <linux/nl80211.h>
+#include <netlink/netlink.h>
+#include <netlink/genl/genl.h>
+#include <netlink/genl/family.h>
+#include <netlink/genl/ctrl.h>
+
+/* Reboot / sistema (único disponível no Linux userland) */
+#include <linux/reboot.h>
+#include <sys/reboot.h>
+#include <sys/mount.h>
+
+
+
+/* BLUETOOTH */
+void mc_init_bluetooth(void);
+int  mc_bluetooth_scan(void *out_list, int max);
+int  mc_bluetooth_connect(const char *mac_address);
+int  mc_bluetooth_disconnect(void);
+
+
+/* WIFI */
+void mc_wifi_init(void);
+int  mc_wifi_scan(void *out_list, int max);
+int  mc_wifi_connect(const char *ssid, const char *password);
+void mc_wifi_disconnect(void);
+
+
+/* BOOTLOADER (APENAS INTERFACE MESMO, COMO NO LINUX) */
+void mc_bootloader_init(void);
+int  mc_bootloader_load_module(const char *module_name);
+int  mc_bootloader_next_stage(void *info_out);
+void mc_bootloader_reboot(void);
