@@ -136,3 +136,41 @@ int btn_color;
 typedef unsigned long chtype;
 /* Tipo booleano (em algumas builds) */
 typedef char bool;
+/* ────────── Conjunto alternativo de caracteres (ACS) ────────── */
+/* Usados com addch() / mvaddch() para desenhar linhas e cantos */
+
+/* Cantos */
+#define ACS_ULCORNER  0x6b  /* ┌ */
+#define ACS_LLCORNER  0x6c  /* └ */
+#define ACS_URCORNER  0x6a  /* ┐ */
+#define ACS_LRCORNER  0x69  /* ┘ */
+
+/* Linhas horizontais e verticais */
+#define ACS_HLINE     0x71  /* ─ */
+#define ACS_VLINE     0x78  /* │ */
+
+/* Junções e T’s */
+#define ACS_LTEE      0x74  /* ├ */
+#define ACS_RTEE      0x75  /* ┤ */
+#define ACS_BTEE      0x76  /* ┴ */
+#define ACS_TTEE      0x77  /* ┬ */
+#define ACS_PLUS      0x73  /* ┼ */
+
+/* Bloquinhos e caracteres especiais */
+#define ACS_BLOCK     0xdb  /* █ */
+#define ACS_BOARD     0xdc  /* ▓ */
+#define ACS_CKBOARD   0xb2  /* ▒ */
+
+/* Outros símbolos gráficos */
+#define ACS_LARROW    0x1b  /* ← */
+#define ACS_RARROW    0x1a  /* → */
+#define ACS_UARROW    0x19  /* ↑ */
+#define ACS_DARROW    0x18  /* ↓ */
+#define ACS_DIAMOND   0x04  /* ♦ */
+#define ACS_CKBOARD   0xb2  /* ▒ */
+#define ACS_PLMINUS   0x0f  /* ± */
+#define ACS_BULLET    0x07  /* • */
+#define ACS_LANTERN   0x08  /* ⌂ */
+#define ACS_BOARD     0xdc  /* ▓ */
+#define ACS_S1        0xb0  /* ░ */
+#define ACS_S9        0xb1  /* ▒ */
