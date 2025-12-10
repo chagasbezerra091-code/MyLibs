@@ -308,3 +308,4 @@ void recoveryadb(void) {
     
     system("adb reboot recovery");
 }
+/* END. */
